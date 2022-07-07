@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Right on target
 //
-//  Created by Sergey on 7/6/22.
+//  Created by Sergey Burdakov on 7/6/22.
 //
 import UIKit
 
