@@ -58,6 +58,7 @@ class ViewController: UIViewController {
             self.round = 1
             self.lastPoints = self.points // added by Sergey
             self.points = 0
+            self.displayChoose.text = "-"
         } else {
             self.round += 1
         }
