@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet var displayNum: UILabel!
     @IBOutlet var displayPoints: UILabel!
     @IBOutlet var displayChoose: UILabel!
+    @IBAction func showNextScreen() {
+        self.present(secondViewController, animated: true, completion: nil)
+    }
     // number
     var number: Int = 0
     // round
@@ -20,7 +23,38 @@ class ViewController: UIViewController {
     var points: Int = 0
     // last points added by Sergey
     var lastPoints: Int = 0
+    // lazy var for View Controller
+    lazy var secondViewController: SecondViewController = getSecondViewController()
     
+    private func getSecondViewController() -> SecondViewController {
+        // load Main.storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // load View Controller and its scene from Main.storyboard
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
+    
+    
+    override func loadView() {
+        super.loadView()
+        print("loadView")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisappear")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,6 +63,8 @@ class ViewController: UIViewController {
         // provide number value to Label
         self.label.text = String(self.number)
     }
+    
+    
     @IBAction func displayNumber() {
         self.displayNum.text = String(Int(self.slider.value.rounded()))
     }

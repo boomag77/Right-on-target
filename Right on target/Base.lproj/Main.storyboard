@@ -25,24 +25,8 @@
                                     <action selector="displayNumber" destination="BYZ-38-t0r" eventType="valueChanged" id="PsU-l4-Rsr"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-87-nRi">
-                                <rect key="frame" x="407.5" y="252" width="81" height="37"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Check">
-                                            <attributes>
-                                                <font key="NSFont" size="20" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="33F-Kc-Fkb"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCH-Fe-fZD">
-                                <rect key="frame" x="442" y="319" width="12.5" height="24"/>
+                                <rect key="frame" x="442" y="319" width="12" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,31 +61,68 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I52-pX-slo">
+                                <rect key="frame" x="772.5" y="365" width="103.5" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="About program">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="wGi-9M-fUc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-87-nRi">
+                                <rect key="frame" x="407.5" y="252" width="81" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Check">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="33F-Kc-Fkb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Nf-BI-Cnu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="390" id="03c-Tz-8iT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MtL-dL-mbA" secondAttribute="trailing" constant="30" id="0C3-lo-WCI"/>
-                            <constraint firstItem="FEb-E6-gge" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WBc-ag-VW9" secondAttribute="trailing" constant="8" symbolic="YES" id="4a5-dp-p0B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jK8-NJ-7F2" secondAttribute="trailing" constant="20" id="4tA-1c-AjE"/>
+                            <constraint firstItem="I52-pX-slo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="6bb-41-Db7"/>
+                            <constraint firstItem="DzC-87-nRi" firstAttribute="centerX" secondItem="CCH-Fe-fZD" secondAttribute="centerX" id="8R2-29-wJy"/>
+                            <constraint firstItem="I52-pX-slo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8od-QA-CMR"/>
                             <constraint firstItem="WBc-ag-VW9" firstAttribute="leading" secondItem="7pi-03-yp8" secondAttribute="trailing" constant="40" id="AUB-lR-2UN"/>
-                            <constraint firstItem="jK8-NJ-7F2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GYT-li-ZuG"/>
+                            <constraint firstItem="FEb-E6-gge" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WBc-ag-VW9" secondAttribute="trailing" constant="8" symbolic="YES" id="CUz-B2-BxX"/>
                             <constraint firstItem="FEb-E6-gge" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="GtL-71-Mft"/>
                             <constraint firstItem="WBc-ag-VW9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="HAT-0t-S7b"/>
                             <constraint firstItem="6Nf-BI-Cnu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="Jzd-np-SOf"/>
                             <constraint firstItem="MtL-dL-mbA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="MPa-sv-F0B"/>
-                            <constraint firstItem="DzC-87-nRi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SW1-Ug-03F"/>
-                            <constraint firstItem="DzC-87-nRi" firstAttribute="top" secondItem="jK8-NJ-7F2" secondAttribute="bottom" constant="30" id="bVj-Tr-7xr"/>
+                            <constraint firstAttribute="trailing" secondItem="I52-pX-slo" secondAttribute="trailing" constant="20" id="Wgu-1r-ev4"/>
+                            <constraint firstItem="CCH-Fe-fZD" firstAttribute="top" secondItem="DzC-87-nRi" secondAttribute="bottom" constant="30" id="fhn-hQ-ASJ"/>
                             <constraint firstItem="jK8-NJ-7F2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fia-fh-q00"/>
-                            <constraint firstItem="CCH-Fe-fZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gOJ-ud-FKL"/>
                             <constraint firstItem="6Nf-BI-Cnu" firstAttribute="centerX" secondItem="jK8-NJ-7F2" secondAttribute="centerX" id="mnu-5E-Zl0"/>
+                            <constraint firstItem="jK8-NJ-7F2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nKZ-rs-QQH"/>
                             <constraint firstItem="7pi-03-yp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oP9-9q-6Ny"/>
                             <constraint firstItem="7pi-03-yp8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="sIT-od-3pn"/>
-                            <constraint firstItem="CCH-Fe-fZD" firstAttribute="top" secondItem="DzC-87-nRi" secondAttribute="bottom" constant="30" id="sh2-Uu-H9Z"/>
+                            <constraint firstItem="jK8-NJ-7F2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWF-8e-Wlp"/>
+                            <constraint firstItem="CCH-Fe-fZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t3F-bZ-OVv"/>
                             <constraint firstItem="MtL-dL-mbA" firstAttribute="leading" secondItem="FEb-E6-gge" secondAttribute="trailing" constant="50" id="uqt-bb-75P"/>
+                            <constraint firstItem="DzC-87-nRi" firstAttribute="top" secondItem="jK8-NJ-7F2" secondAttribute="bottom" constant="30" id="wBe-nw-3o7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2iv-YA-jIn"/>
                     <connections>
                         <outlet property="displayChoose" destination="WBc-ag-VW9" id="uDg-in-vfs"/>
                         <outlet property="displayNum" destination="6Nf-BI-Cnu" id="Rpy-ax-pQC"/>
@@ -112,7 +133,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.794642857142854" y="65.217391304347828"/>
+            <point key="canvasLocation" x="-8.0357142857142847" y="-823.1884057971015"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="DFE-6v-UH1">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Vv7-wz-FP0" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XgN-yH-Xar">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHB-ls-lWx">
+                                <rect key="frame" x="414" y="188.5" width="68.5" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hideCurrentScene" destination="Vv7-wz-FP0" eventType="touchUpInside" id="2xk-L2-YBn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="neJ-au-H7o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SHB-ls-lWx" firstAttribute="centerY" secondItem="XgN-yH-Xar" secondAttribute="centerY" id="3Ox-jH-PMe"/>
+                            <constraint firstItem="SHB-ls-lWx" firstAttribute="centerX" secondItem="XgN-yH-Xar" secondAttribute="centerX" id="oIq-dZ-7OO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gF1-B9-IUQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1R-cM-dpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="52"/>
         </scene>
     </scenes>
     <resources>
