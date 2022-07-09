@@ -8,9 +8,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    @IBAction func hideCurrentScene() {
-        self.dismiss(animated: true)
-    }
+   
     
     
     override func loadView() {

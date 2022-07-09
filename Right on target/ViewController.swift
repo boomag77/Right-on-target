@@ -12,9 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var displayNum: UILabel!
     @IBOutlet var displayPoints: UILabel!
     @IBOutlet var displayChoose: UILabel!
-    @IBAction func showNextScreen() {
-        self.present(secondViewController, animated: true, completion: nil)
-    }
+    
     // number
     var number: Int = 0
     // round
