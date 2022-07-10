@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("viewDidLoad")
         let generator = NumberGenerator(startValue: 1, endValue: 50)!
-        game = Game(valueGenerator: generator, rounds: 3)
+        let rounds = Settings()
+        game = Game(valueGenerator: generator, rounds: rounds.getNumberOfRounds())
         updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
     
