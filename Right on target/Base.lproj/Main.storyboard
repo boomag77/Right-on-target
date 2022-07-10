@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game scene-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Game scene" id="BYZ-38-t0r" customClass="ViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="735.26785714285711" y="-823.1884057971015"/>
         </scene>
-        <!--About-->
+        <!--Settings-->
         <scene sceneID="DFE-6v-UH1">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="Vv7-wz-FP0" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,11 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="neJ-au-H7o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="gF1-B9-IUQ"/>
+                    <navigationItem key="navigationItem" title="Settings" id="gF1-B9-IUQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1R-cM-dpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="52"/>
+            <point key="canvasLocation" x="-8.0357142857142847" y="50.724637681159422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FKP-Ku-TP8">

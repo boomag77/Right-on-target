@@ -10,7 +10,6 @@ import UIKit
 class SecondViewController: UIViewController {
    
     
-    
     override func loadView() {
         super.loadView()
         print("loadView secondViewController")
@@ -36,10 +35,6 @@ class SecondViewController: UIViewController {
         print("viewDidDisappear secondViewController")
     }
     
-    
-
-    
-
     /*
     // MARK: - Navigation
 

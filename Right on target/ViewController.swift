@@ -15,45 +15,28 @@ class ViewController: UIViewController {
     @IBOutlet var displayPoints: UILabel!
     @IBOutlet var displayChoose: UILabel!
     
-    // number
-    var number: Int = 0
-    // round
-    var round: Int = 1
-    //sum of points per round
-    var points: Int = 0
-    // last points added by Sergey
-    var lastPoints: Int = 0
-    // lazy var for View Controller
-    lazy var secondViewController: SecondViewController = getSecondViewController()
-    
-    private func getSecondViewController() -> SecondViewController {
-        // load Main.storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // load View Controller and its scene from Main.storyboard
-        let viewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
-        return viewController as! SecondViewController
-    }
     
     //MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
-        game = Game(startValue: 1, endValue: 50, rounds: 3)
-        updateLabelWithSecretNumber(newText: String(game.currenSecretValue))
+        let generator = NumberGenerator(startValue: 1, endValue: 50)!
+        game = Game(valueGenerator: generator, rounds: 3)
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
     
     //MARK: Interaction View - Model
     
     @IBAction func checkNumber() {
-        game.calcScore(with: Int(slider.value))
+        game.currentRound.calcScore(with: Int(slider.value))
         if game.isGameEnded {
             showAlertWith(score: game.score)
             game.restartGame()
         } else { game.startNewRound() }
-        updateLabelWithSecretNumber(newText: String(game.currenSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
         updateLabelWithChoosedNumber(newText: String(Int(slider.value)))
-        updateLabelWithCurrentScore(newText: String(game.currentScore))
+        updateLabelWithCurrentScore(newText: String(game.score))
     }
     
     //MARK: Update View
